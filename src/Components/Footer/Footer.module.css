@@ -1,0 +1,34 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: #121212;
+    font-size: 2em;
+    font-family: 'Josefin Slab', serif;
+    color: var(--color1);
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 30px 10px;
+}
+.info > div{
+    margin: 30px 10px;
+    line-height: 1.4em;
+}
+.infoTel{
+    text-align: start;
+}
+.infoRede{
+    text-align: center;
+}
+.infoEnd{
+    text-align: end;
+}
+.titulo{
+    font-family: 'Qwitcher Grypen', cursive;
+    color: var(--color2);
+    font-size: 4em;
+}

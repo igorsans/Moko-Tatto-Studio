@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
 .header{
     display: flex;
     flex-direction: column;
@@ -26,6 +24,6 @@
     font-size: 2em;
     padding: 10px 0px;
     font-family: 'Kavivanar', cursive;
-    color: whitesmoke;
+    color: var(--color1);
     text-decoration: none;
 }

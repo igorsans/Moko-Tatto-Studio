@@ -1,4 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
+
+:root {
+  --color1: whitesmoke;
+} 
+
+
 *{
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: #1C1C1C;
 }

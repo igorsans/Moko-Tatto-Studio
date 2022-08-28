@@ -9,6 +9,7 @@
     width: 100%;
     height: 70vh;
     background-image: url("https://www.laustattoo.com/site/wp-content/uploads/2020/08/tatuagem-quem-nao-pode.jpg");
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,25 +19,61 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: red;
     width: 100%;
 }
 
 .subT {
-    margin: 40px auto;
+    margin: 60px auto;
+    font-size: 1.7em;
     font-family: 'Kavivanar', cursive;
     color: var(--color1);
 }
-
-.cardsNewsEven {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-
+.cards{
+    font-family: 'Petrona', serif;
+    font-size: 1.6em;
+    color: var(--color1);
 }
 
-.cardsNewsOdd {
+.cards > div:nth-child(odd){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.cards > div:nth-child(even){
     display: flex;
     flex-direction: row-reverse;
-
+    justify-content: center;
+    align-items: center;
+}
+.imgStyle {
+    margin: 20px;
+    height: 220px;
+    width: 320px;
+}
+.textoStyle{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+.divBgUm{
+    height: 350px;
+    background-image: linear-gradient(rgba(58, 58, 58, 0.646), rgba(58, 58, 58, 0.646)), url('https://raislife.com/blog/wp-content/uploads/2017/12/rais-life-saude-viva-saudavel-Ter-amigos-verdadeiros-pode-fazer-bem-para-a-sa%C3%BAde-afirma-pesquisa-1200x900.jpg');
+}
+.divBgDois{
+    height: 350px;
+    background-image: linear-gradient(rgba(58, 58, 58, 0.646), rgba(58, 58, 58, 0.646)), url('https://i.pinimg.com/originals/06/b4/91/06b491c36ab7485f40eed939d6729f70.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.link{
+    color: var(--color1);
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.268);
 }

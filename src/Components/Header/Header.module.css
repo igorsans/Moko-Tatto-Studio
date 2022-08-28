@@ -9,7 +9,7 @@
 }
 .header>h1{
     font-family: 'Qwitcher Grypen', cursive;
-    color: red;
+    color: var(--color2);
     font-size: 4em;
 }
 
@@ -25,5 +25,4 @@
     padding: 10px 0px;
     font-family: 'Kavivanar', cursive;
     color: var(--color1);
-    text-decoration: none;
 }

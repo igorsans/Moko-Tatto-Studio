@@ -1,10 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Petrona:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&display=swap');
 :root {
   --color1: whitesmoke;
-} 
+  --color2: red;
+  --color3: #1C1C1C;
+}
+::-webKit-scrollbar{
+  width:15px
+  }
+  ::-webKit-scrollbar-track{
+  background-color: #2c2c2c ;
+  /* border-radius: 40px; */
+  }
+  ::-webkit-scrollbar-thumb{
+  background-color: var(--color1);
+  border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+  background-color: var(--color3);
+  border: 8px 8px 8px white;
+}
 
+a{
+  text-decoration: none;
+  color: var(--color1);
+}
+a:hover{
+  background-color: #1c1c1c94;
+}
 
 *{
   margin: 0;

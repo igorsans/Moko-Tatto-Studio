@@ -1,11 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./Components/Header/Header";
+import Home from "./Pages/Home/Home";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+ 
   return (
-    <div>Hello World</div>
+    <BrowserRouter>
+      <Header/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+    </BrowserRouter>
   )
 }
 

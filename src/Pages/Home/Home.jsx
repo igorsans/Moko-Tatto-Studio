@@ -1,10 +1,9 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import CardNews from "../../Components/CardNews/CardNews";
 import S from "./Home.module.css";
 
 const Home = () => {
-  const [news, setNews] = useState([
+  const news =[
     {
       titulo: "Saímos no G1",
       texto:
@@ -38,7 +37,7 @@ const Home = () => {
       divStyle: S.divBgDois,
       textoStyle: S.textoStyle
     },
-  ]);
+  ];
   return (
     <div className={S.container}>
       <div className={S.img}></div>

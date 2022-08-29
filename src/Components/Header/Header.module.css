@@ -6,9 +6,10 @@
     position: fixed;
     top: 0%;
     width: 100%;
+    z-index: 1;
 }
 .header>h1{
-    font-family: 'Qwitcher Grypen', cursive;
+    font-family: var(--font1);
     color: var(--color2);
     font-size: 4em;
 }
@@ -23,6 +24,6 @@
 .link{
     font-size: 2em;
     padding: 10px 0px;
-    font-family: 'Kavivanar', cursive;
+    font-family: var(--font2) ;
     color: var(--color1);
 }

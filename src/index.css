@@ -6,6 +6,9 @@
   --color1: whitesmoke;
   --color2: red;
   --color3: #1C1C1C;
+  --color4: #121212;
+  --font1: 'Qwitcher Grypen', cursive;
+  --font2: 'Kavivanar', cursive;
 }
 ::-webKit-scrollbar{
   width:15px

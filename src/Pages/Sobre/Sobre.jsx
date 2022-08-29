@@ -39,15 +39,7 @@ const Sobre = () => {
     },
   ]);
   const  trocaCard = async()=>{
-    if(cards){
-      setCards(false)
-      setTatto({...tatto, ["dev"]: false})
-    }else{
-      setCards(true)
-      setTatto({...tatto, ["dev"]: true})
-    }
-    
-    console.log(cards, tatto);
+   cards? setCards(false) : setCards(true)
   }
   return (
     <div>
@@ -64,7 +56,7 @@ const Sobre = () => {
             linkedin={item.linkedin}
             github={item.github}
             texto={item.texto}
-            dev={item.dev}
+            cards={cards}
             />
           ) : 'não achei'}       
       </section>

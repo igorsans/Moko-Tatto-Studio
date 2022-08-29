@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CardDev from "../../Components/CardDev/CardDev"
+import S from './Sobre.module.css'
 
 
 const Sobre = () => {
@@ -7,7 +8,7 @@ const Sobre = () => {
   const [tatto, setTatto] = useState([
     {
       img: "https://avatars.githubusercontent.com/u/102765157?v=4",
-      nome: "Guilherme Cordeiro Da Mata",
+      nome: "Guilherme Cordeiro",
       linkedin: "https://www.linkedin.com/in/guilhermecordeirodamata/",
       github: "https://github.com/Dev-DaMata",
       texto: "oioi",
@@ -38,16 +39,17 @@ const Sobre = () => {
       dev: true
     },
   ]);
-  const  trocaCard = async()=>{
-   cards? setCards(false) : setCards(true)
+  const  trocaCard = ()=>{
+    cards? setCards(false) : setCards(true)
   }
   return (
     <div>
-      <div>
+      <div className={S.img}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quis! Pariatur odio perspiciatis quae vero aliquam necessitatibus in provident. Fugiat saepe, nostrum cum quis alias est? Nulla accusamus nemo dolorem.</p>
       </div>
       <section>
-          <h1 onClick={trocaCard} >Tattuadores</h1>
+          <h3 className={S.titulo} onPointerEnter={trocaCard} >{cards ? "Desenvolvedores" : "Tattuadores" }</h3>
+          <div className={S.cardsContainer}>
           {tatto.length > 0 ? tatto.map((item)=>
             <CardDev
             key={item.nome}
@@ -58,7 +60,8 @@ const Sobre = () => {
             texto={item.texto}
             cards={cards}
             />
-          ) : 'não achei'}       
+          ) : 'não achei'}    
+          </div>            
       </section>
     </div>
   )

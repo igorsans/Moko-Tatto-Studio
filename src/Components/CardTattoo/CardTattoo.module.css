@@ -1,0 +1,37 @@
+.img {
+    width: 250px;
+    height: 250px;
+    transition: 0.5s;
+}
+
+.img:hover {
+    transform: scale(1.1, 1.1);
+    background: white;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .5);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card {
+    background-color: var(--color2);
+    width: 300px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--color1);
+    font-family: var(--font2);
+    font-size: 1.2em;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.886);
+    border-radius: 10px;
+    border: none;
+}
+
+.botao {
+    width: 100%;
+    cursor: pointer;
+    font-family: var(--font2);
+    font-size: 1.4em;
+}

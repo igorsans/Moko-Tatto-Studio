@@ -1,6 +1,5 @@
 
 const CardNews = ({textoStyle ,divStyle, imgStyle, imgSrc, imgAlt, titulo, texto}) => {
-  console.log(imgStyle)
   return (
     <div className={divStyle}>
         <div>

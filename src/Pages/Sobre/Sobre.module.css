@@ -4,6 +4,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 30px;
+    font-family: var(--font1);
+    
 }
 
 .titulo{

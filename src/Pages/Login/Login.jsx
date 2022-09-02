@@ -1,29 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import CadastroForm from "../../Components/CadastroForm/CadastroForm";
 import LoginForm from "../../Components/LoginForm/LoginForm";
 import S from './Login.module.css'
+import { UserContext } from "../../Context/UserProvider";
 
 const Login = () => {
-  const [formCad, setformCad] = useState({
-    name: "",
-    sobrenome: "",
-    telefone: "",
-    dataNascimento: "",
-    email: "",
-    senha: "",
-  });
-  const handleSetformCad = (target, key) => {
-    setformCad({ ...formCad, [key]: target.value });
-    console.log(formCad)
-  }
-
+  const {formCad, handleSetFormCad, cadastrarUser} = useContext(UserContext)
+  console.log(cadastrarUser)
   return (
     <div className={S.container}>
       <div>
         <LoginForm />
       </div>
       <div>
-        <CadastroForm data={formCad} setData={handleSetformCad}/>
+        <CadastroForm titulo={"Cadastre-se"} text={"Cadastrar"} cadastrar={cadastrarUser} data={formCad} setData={handleSetFormCad}/>
       </div>
     </div>
   );

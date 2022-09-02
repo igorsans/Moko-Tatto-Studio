@@ -32,6 +32,7 @@
     font-family: 'Petrona', serif;
     font-size: 1.6em;
     color: var(--color1);
+    width: 60%;
 }
 
 .cards > div:nth-child(odd){
@@ -39,12 +40,16 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: var(--color4);
+    padding: 50px 10px;
 }
 .cards > div:nth-child(even){
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
+    background-color: var(--color2);
+    padding: 50px 10px;
 }
 .imgStyle {
     margin: 20px;

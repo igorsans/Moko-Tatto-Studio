@@ -8,16 +8,19 @@ import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
 import Clientes from "../Pages/Dashboard/Clientes";
 import HeaderDash from "../Components/HeaderDash/HeaderDash";
+import UserProvider from "../Context/UserProvider";
 
 const Routes = () => {
   return (
-    <Switch>
-      <Route path="/" element={<div> <Header/> <Home /> <Footer/> </div>}/>
-      <Route path="/sobre" element={<div> <Header/> <Sobre /> <Footer/> </div>} />
-      <Route path="/eventos/flashday" element={<div> <Header/> <Tatuagens /> <Footer/> </div>} />
-      <Route path="/login" element={<div> <Header/> <Login />  <Footer/> </div>} />
-      <Route path="/dashboard/Clientes" element={<div> <HeaderDash/> <Clientes/> </div>}/>
-    </Switch>
+    <UserProvider>
+      <Switch>
+        <Route path="/" element={<div> <Header/> <Home /> <Footer/> </div>}/>
+        <Route path="/sobre" element={<div> <Header/> <Sobre /> <Footer/> </div>} />
+        <Route path="/eventos/flashday" element={<div> <Header/> <Tatuagens /> <Footer/> </div>} />
+        <Route path="/login" element={<div> <Header/> <Login />  <Footer/> </div>} />
+        <Route path="/dashboard/Clientes" element={<div> <HeaderDash/> <Clientes/> </div>}/>
+      </Switch>
+    </UserProvider>
   );
 };
 

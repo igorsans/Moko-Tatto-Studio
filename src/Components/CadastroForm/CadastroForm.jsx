@@ -11,7 +11,7 @@ const CadastroForm = ({ data, setData }) => {
             <TextField id="standard-basic" label="Telefone" variant="standard" onChange={({ target }) => setData(target, 'telefone')} value={data.telefone} />
             <TextField id="outlined-basic" placeholder="Ex: 01/01/2001" label="Data de Nascimento" variant="standard" onChange={({ target }) => setData(target, 'dataNascimento')} value={data.dataNascimento} />
             <TextField id="standard-basic" label="Email" variant="standard" onChange={({ target }) => setData(target, 'email')} value={data.email} />
-            <TextField id="standard-basic" label="Senha" variant="standard" onChange={({ target }) => setData(target, 'senha')} value={data.senha} />
+            <TextField id="standard-basic" label="Senha" variant="standard" onChange={({ target }) => setData(target, 'senha')} value={data.senha} type="password" />
             <Button variant="outlined">Cadastrar</Button>
           </form>
         </div>

@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 120px;
+    background-color: var(--color2);
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background-color: var(--color3);
+    width: 100%;
+    font-size: 1.4em;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.587);
+}

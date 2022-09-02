@@ -4,7 +4,7 @@ import LoginForm from "../../Components/LoginForm/LoginForm";
 import S from './Login.module.css'
 
 const Login = () => {
-  const [dataForm, setDataForm] = useState({
+  const [formCad, setformCad] = useState({
     name: "",
     sobrenome: "",
     telefone: "",
@@ -12,9 +12,9 @@ const Login = () => {
     email: "",
     senha: "",
   });
-  const handleSetDataForm = (target, key) => {
-    setDataForm({ ...dataForm, [key]: target.value });
-    console.log(dataForm)
+  const handleSetformCad = (target, key) => {
+    setformCad({ ...formCad, [key]: target.value });
+    console.log(formCad)
   }
 
   return (
@@ -23,7 +23,7 @@ const Login = () => {
         <LoginForm />
       </div>
       <div>
-        <CadastroForm data={dataForm} setData={handleSetDataForm}/>
+        <CadastroForm data={formCad} setData={handleSetformCad}/>
       </div>
     </div>
   );

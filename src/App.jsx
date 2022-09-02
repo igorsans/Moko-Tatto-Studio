@@ -8,9 +8,9 @@ function App() {
  
   return (
     <BrowserRouter>
-      <Header/>
+      {/* <Header/> */}
         <Routes/>
-      <Footer/>
+      {/* <Footer/> */}
     </BrowserRouter>
   )
 }

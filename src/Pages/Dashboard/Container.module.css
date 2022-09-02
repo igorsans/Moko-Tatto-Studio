@@ -1,0 +1,25 @@
+.container{
+    margin: 50px auto;
+    width: 80%;
+    height: 70vh;
+    background-color: var(--color1);
+    border-radius: 7px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.726);
+}
+.input{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--color5);
+    border-radius: 7px;
+}
+.modal{
+    position: 'absolute';
+    top: '50%';
+    left: '50%';
+    transform: 'translate(-50%, -50%)';
+    width: 400;
+    background-color: 'background.paper';
+    border: '2px solid #000';
+    boxShadow: 24;
+}

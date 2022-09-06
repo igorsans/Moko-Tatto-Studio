@@ -32,7 +32,7 @@
     font-family: 'Petrona', serif;
     font-size: 1.6em;
     color: var(--color1);
-    width: 60%;
+    width: 75%;
 }
 
 .cards > div:nth-child(odd){
@@ -59,21 +59,10 @@
 .textoStyle{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 50%;
     gap: 10px;
     margin: 20px;
     padding: 20px;
-}
-.divBgUm{
-    height: 350px;
-    background-image: linear-gradient(rgba(58, 58, 58, 0.646), rgba(58, 58, 58, 0.646)), url('https://raislife.com/blog/wp-content/uploads/2017/12/rais-life-saude-viva-saudavel-Ter-amigos-verdadeiros-pode-fazer-bem-para-a-sa%C3%BAde-afirma-pesquisa-1200x900.jpg');
-}
-.divBgDois{
-    height: 350px;
-    background-image: linear-gradient(rgba(58, 58, 58, 0.646), rgba(58, 58, 58, 0.646)), url('https://i.pinimg.com/originals/06/b4/91/06b491c36ab7485f40eed939d6729f70.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .link{
     color: var(--color1);

@@ -3,9 +3,9 @@ import axios from "axios";
 const api = axios.create({
   baseURL: "https://moko-tatto-api.herokuapp.com",
 });
-export async function getClientes() {
-  const response = await api.get("/clientes");
-  return response.data;
+export async function getApi(rota) {
+  const response = await api.get(rota);
+  return response.data.resultado;
 }
 export async function delClientes(id) {
   const response = await api.delete(`/clientes/${id}`);
@@ -16,12 +16,18 @@ export async function postCliente(obj) {
   return response
 }
 export async function putCliente(id, obj) {
-  console.log(obj)
   const response = await api.put(`/clientes/${id}`, obj)
   return response
 }
+
+
 export async function getNoticias() {
   const response = await api.get("/noticias");
-  console.log(response)
+  return response.data.resultado;
+}
+
+
+export async function getTattos(){
+  const response = await api.get("/tatuagens")
   return response.data.resultado;
 }

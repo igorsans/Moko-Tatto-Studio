@@ -35,7 +35,7 @@ const Sobre = () => {
       nome: "Pedro Garrido",
       linkedin: "https://www.linkedin.com/in/pedro-garrido-1a8482205/",
       github: "https://github.com/Garridopedro",
-      texto: "oioi",
+      texto: "Olá, meu nome é Pedro e sou especialista em pontilhismo. Comecei a me apaixonar pelo estilo há 10 anos atrás e sigo marcando meu trabalho na vida das pessoas.",
       dev: true
     },
   ]);

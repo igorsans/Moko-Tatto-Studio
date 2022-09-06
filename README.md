@@ -25,10 +25,10 @@
 
 
 <h1> 🧱Database:</h1>
-<h4> API Rest do projeto Moko Tatto Studio, criado no módulo 4;</h4>
+<h4> API Rest do projeto Moko Tatto Studio, criado em Squad.</h4>
 
-<h1> 🤕Solução de problemas:</h1>
-<h4> Favor entrar em contato com a equipe;</h4>
+<h1> 🐛Solução de problemas:</h1>
+<h4> Favor entrar em contato com a equipe 💬</h4>
 
 <h1 align='center'> 👷Contribuintes:</h1>
 

@@ -37,4 +37,3 @@
 |  **Edson** 👍 | **Guilherme** 👍 | **Igor** 👍 | **Pedro**👍 |
 | **[Github](https://github.com/Edson-7728)** 💻  | **[Github](https://github.com/Dev-DaMata)** 💻  | **[Github](https://github.com/igorsans)** 💻  | **[Github](https://github.com/Garridopedro)** 💻  |
 | **[Linkedin](https://www.linkedin.com/in/edson-vieira7728/)** 💻 | **[Linkedin](https://www.linkedin.com/in/guilhermecordeirodamata/)** 💻 | **[Linkedin](https://www.linkedin.com/in/devsantos/)** 💻 | **[Linkedin](https://www.linkedin.com/in/pedro-garrido-1a8482205)** 💻 |
-<h4> Licença:</h4>

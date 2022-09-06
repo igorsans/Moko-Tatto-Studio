@@ -1,17 +1,38 @@
-import {Link} from 'react-router-dom'
-import S from './Header.module.css'
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { UserContext } from "../../Context/UserProvider";
+import S from "./Header.module.css";
+
 const Header = () => {
+  const { usuario, usuarioLogado } = useContext(UserContext);
   return (
     <header className={S.header}>
-        <h1>Moko Tatto Studio</h1>
-        <nav className={S.nav}>
-            <Link className={S.link} to='/'>Home</Link>
-            <Link className={S.link} to='/sobre'>Sobre</Link>
-            <Link className={S.link} to='/eventos/flashday'>Eventos</Link>
-            <Link className={S.link} to='/'>Cadastre-Se</Link>
-        </nav>
+      <h1>Moko Tatto Studio</h1>
+      <nav className={S.nav}>
+        <Link className={S.link} to="/">
+          Home
+        </Link>
+        <Link className={S.link} to="/sobre">
+          Sobre
+        </Link>
+        <Link className={S.link} to="/eventos/flashday">
+          Eventos
+        </Link>
+        {usuarioLogado ? (
+          <div>
+            <p>Bem vindo de volta</p>
+            <Link className={S.link} to="/usuario">
+            {usuario.nome}
+          </Link>
+            </div>
+        ) : (
+          <Link className={S.link} to="/Login">
+            Cadastre-Se
+          </Link>
+        )}
+      </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

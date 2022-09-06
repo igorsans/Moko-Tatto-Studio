@@ -2,14 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Petrona:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&display=swap');
+
 :root {
   --color1: whitesmoke;
   --color2: #94383E;
   --color3: #1C1C1C;
   --color4: #121212;
+  --color5: #D9D9D9;
+  --color6: #471D21;
+
   --font1: 'Qwitcher Grypen', cursive;
   --font2: 'Kavivanar', cursive;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
 ::-webKit-scrollbar{
   width:15px
   }
@@ -25,18 +35,32 @@
   background-color: var(--color3);
   border: 8px 8px 8px white;
 }
+*::selection{
+  color: var(--color1);
+  background-color: var(--color2);
+}
 
 a{
+  position: relative;
   text-decoration: none;
   color: var(--color1);
-}
-a:hover{
-  background-color: #1c1c1c94;
+  /* padding: 0 10px; */
+  
 }
 
-*{
-  margin: 0;
-  padding: 0;
+a:after{
+  content: "";
+  position: absolute;
+  background-color: var(--color2);
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 0px;
+  transition: 0.3s;
+}
+
+a:hover:after{
+  width: 100%;
 }
 
 body {

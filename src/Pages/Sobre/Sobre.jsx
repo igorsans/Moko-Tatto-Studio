@@ -11,7 +11,7 @@ const Sobre = () => {
       nome: "Guilherme Cordeiro",
       linkedin: "https://www.linkedin.com/in/guilhermecordeirodamata/",
       github: "https://github.com/Dev-DaMata",
-      texto: "oioi",
+      texto: "Ola, me chamo Guilherme e sou apaixonado por tattuagens. e a minha meta aqui na Moko tatto é transmitir essa paizão para os meus clientes",
       dev: true
     },
     {
@@ -45,7 +45,7 @@ const Sobre = () => {
   return (
     <div>
       <div className={S.img}>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quis! Pariatur odio perspiciatis quae vero aliquam necessitatibus in provident. Fugiat saepe, nostrum cum quis alias est? Nulla accusamus nemo dolorem.</p>
+        <p>O Moko Tatto é um estúdio focado na estilização de uma vida alternativo, Aqui você vai encontrar um espaço para esboçar as suas ideias e resgistrar em sua pele.</p>
       </div>
       <section>
           <h3 className={S.titulo} onPointerEnter={trocaCard} >{cards ? "Desenvolvedores" : "Tattuadores" }</h3>

@@ -1,10 +1,10 @@
 
-const CardNews = ({textoStyle ,divStyle, imgStyle, imgSrc, imgAlt, titulo, texto}) => {
-  console.log(imgStyle)
+const CardNews = ({textoStyle ,divStyle, imgStyle, imgSrc, titulo, texto}) => {
+
   return (
     <div className={divStyle}>
         <div>
-            <img className={imgStyle} src={imgSrc} alt={imgAlt} />
+            <img className={imgStyle} src={imgSrc}/>
         </div>
         <div className={textoStyle}>
             <h3>{titulo}</h3>

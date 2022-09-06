@@ -1,5 +1,6 @@
 .cardsContainer{
-    margin: 40px auto;
+    margin: 100px auto;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -13,6 +14,8 @@
     margin-top: 150px;
     color: var(--color1);
     font-family: var(--font2);
+    background-color: var(--color6);
+    padding: 80px;
 }
 
 
@@ -21,11 +24,12 @@
     justify-content: center;
     gap: 15px;
     width: 80%;
-
 }
 
 .texto {
     width: 280px;
+    color: var(--color1);
+    
 }
 
 .texto > h3{

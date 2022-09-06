@@ -2,26 +2,42 @@ import { Box, Button, Modal } from "@mui/material";
 import { useContext, useEffect, useState } from "react";
 import CardTattoo from "../../Components/CardTattoo/CardTattoo";
 import { UserContext } from "../../Context/UserProvider";
-import { getApi} from "../../Services/api";
+import { getApi, putApi } from "../../Services/api";
 import S from "./Tatuagens.module.css";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: "50vh",
+  bgcolor: "#a5a5a587",
+  boxShadow: 24,
+  p: 4,
+};
 
 const Tatuagens = () => {
   const { usuario, usuarioLogado } = useContext(UserContext);
   const [dados, setDados] = useState([]);
-  const [modal, setModal] = useState(false)
-//   const [tatto, setTatto] = useState()
+  const [modal, setModal] = useState(false);
+  const [tatto, setTatto] = useState("");
 
-  const handleModal = () =>{
-    modal ? setModal(false) : setModal(true)
+  const handleModal = () => {
+    modal ? setModal(false) : setModal(true);
+  };
+
+  const hookTatto = (obj) => {
+    handleModal();
+    setTatto({ ...obj });
+    console.log(usuario)
+  };
+  async function handleAgendamento(){
+    const obj = { disponivel: 0, idComprador: usuario.id}
+
+    await putApi(`/tatuagens/cliente`, tatto.id, obj)
   }
-
-  const hookTatto = () => {
-    handleModal()
-    // setTatto({...obj})
-  }
-
   async function handleRequisicao() {
-    const dados = await getApi("/tatuagens")
+    const dados = await getApi("/tatuagens");
     setDados(dados);
   }
 
@@ -76,9 +92,11 @@ const Tatuagens = () => {
                 imagemUrl={item.imagemUrl}
                 nomeTatuador={item.nomeTatuador}
                 preco={item.preco}
+                disponivel={item.disponivel}
+                onclick={() => hookTatto(item)}
               />
             ))
-          : "Carregando"}
+          : "Carregando..."}
       </div>
       <Modal
         open={modal}
@@ -86,17 +104,21 @@ const Tatuagens = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={'style'}>
-          <p>
-            Deseja comprar a tatto de id: {"tatto"} 
-          </p>
-          <Button
-            onClick={handleModal}
-            color="primary"
-            variant="contained"
-          >
-            Agendar
-          </Button>
+        <Box sx={style}>
+          {usuarioLogado ? (
+            <div>
+              <div>
+                <img className={S.imgTatto} src={tatto.imagemUrl} alt="" />
+                <p>Deseja agendar essa tatuagem?</p>
+                <p>O Valor é de: R$:{tatto.preco}</p>
+              </div>
+              <Button onClick={handleAgendamento} color="primary" variant="contained">
+                Agendar
+              </Button>
+            </div>
+          ) : (
+            <div><p>Você precisa estár logado para efetuar o agendamento!</p></div>
+          )}
         </Box>
       </Modal>
     </section>

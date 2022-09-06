@@ -10,7 +10,9 @@ const CardTattoo = ({disponivel, imagemUrl, nomeTatuador, preco, onclick}) => {
         <div className={S.texto}>
             <p>Preço: R${preco}</p>
             <p>Tatuador: {nomeTatuador}</p>
-            <button onClick={onclick} className={S.botao}>Comprar</button>
+            {disponivel==0 ? <div className={S.off}>
+              <p>Indisponivel</p>
+            </div>: <button onClick={onclick} className={S.botao}>Comprar</button> }
         </div>
     </div>
   )

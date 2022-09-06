@@ -1,9 +1,11 @@
 import { useState, createContext } from "react";
-import { getApi, postCliente } from "../Services/api";
+import { useNavigate } from "react-router-dom";
+import { getApi, postApi } from "../Services/api";
 
 export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
+  const navigate = useNavigate()
   const [usuarioLogado, setUsuarioLogado] = useState(false)
   const [usuario, setUsuario] = useState({})
   const [formCad, setformCad] = useState({
@@ -18,7 +20,7 @@ const UserProvider = ({ children }) => {
     setformCad({ ...formCad, [key]: target.value });
   };
   const cadastrarUser = () => {
-    postCliente(formCad);
+    postApi("/clientes",formCad);
     setformCad({
       nome: "",
       sobrenome: "",
@@ -30,17 +32,14 @@ const UserProvider = ({ children }) => {
     verificaUsuario()
   };
   async function verificaUsuario(obj){
-    const clientes = await getApi()
-    console.log(clientes)
+    const clientes = await getApi("/clientes")
     clientes.filter((item)=>{
       if(item.email == obj.email && item.senha == obj.senha){
         return (
-          console.log("tem"),
           setUsuario(item),
-          setUsuarioLogado(true)
+          setUsuarioLogado(true),
+          navigate("/")
         )
-      } else{
-        console.log(obj)
       }
     })
   }
@@ -49,6 +48,7 @@ const UserProvider = ({ children }) => {
     handleSetFormCad: handleSetFormCad,
     cadastrarUser: cadastrarUser,
     verificaUsuario: verificaUsuario,
+    setformCad: setformCad,
     usuarioLogado: usuarioLogado,
     usuario: usuario
   };

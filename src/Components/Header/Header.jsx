@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../Context/UserProvider";
 import S from "./Header.module.css";
+import { AiOutlineUser, AiOutlineUserAdd } from "react-icons/ai";
+
 
 const Header = () => {
   const { usuario, usuarioLogado } = useContext(UserContext);
@@ -19,15 +21,12 @@ const Header = () => {
           Eventos
         </Link>
         {usuarioLogado ? (
-          <div>
-            <p>Bem vindo de volta</p>
             <Link className={S.link} to="/usuario">
-            {usuario.nome}
+            <AiOutlineUser/> {usuario.nome} 
           </Link>
-            </div>
         ) : (
           <Link className={S.link} to="/Login">
-            Cadastre-Se
+            <AiOutlineUserAdd/>
           </Link>
         )}
       </nav>

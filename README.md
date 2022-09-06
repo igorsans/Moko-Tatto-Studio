@@ -5,7 +5,7 @@
 
 <h1 align='center'>📃Sobre o projeto:</h1>
 
-<h3>Projeto onde teríamos desenvolver site em React que consumiria dados de uma API Rest especifica, de projeto criado no módulo passado. Projeto de final de módulo 5 do curso Web Full Stack da Resilia Educação.</h3>
+<h3>Desenvolvemos um site em React que consumiria dados de uma API Rest especifica criada por nós. Projeto desenvolvido em Squad.</h3>
 
 <h1> ➕Dependências e Libs Instaladas:</h1>
 <ul>

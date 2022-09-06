@@ -32,7 +32,7 @@ const Clientes = () => {
   const [clientes, setClientes] = useState([]);
   const [cliente, setCliente] = useState({})
   async function requisicao() {
-    const resposta = await getApi();
+    const resposta = await getApi("/clientes");
     setClientes(resposta);
   }
 

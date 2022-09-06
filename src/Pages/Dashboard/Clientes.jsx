@@ -6,7 +6,7 @@ import CadastroForm from "../../Components/CadastroForm/CadastroForm";
 import ClienteCard from "../../Components/DashBoard/ClienteCard/ClienteCard";
 import LabelCliente from "../../Components/DashBoard/LabelCards/LabelCliente";
 import { UserContext } from "../../Context/UserProvider";
-import { getClientes, delClientes, putCliente } from "../../Services/api";
+import { getApi, delClientes, putCliente } from "../../Services/api";
 import S from "./Container.module.css";
 
 const style = {
@@ -32,8 +32,8 @@ const Clientes = () => {
   const [clientes, setClientes] = useState([]);
   const [cliente, setCliente] = useState({})
   async function requisicao() {
-    const resposta = await getClientes();
-    setClientes(resposta.resultado);
+    const resposta = await getApi();
+    setClientes(resposta);
   }
 
   const handleModalOpen = (chave) => {

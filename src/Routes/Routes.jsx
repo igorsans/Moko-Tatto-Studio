@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Home from "../Pages/Home/Home";
 import Sobre from "../Pages/Sobre/Sobre";
 import Tatuagens from "../Pages/Tatuagens/Tatuagens";
@@ -8,7 +8,7 @@ import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
 import Clientes from "../Pages/Dashboard/Clientes";
 import HeaderDash from "../Components/HeaderDash/HeaderDash";
-import UserProvider from "../Context/UserProvider";
+import UserProvider, { UserContext } from "../Context/UserProvider";
 
 const Routes = () => {
   return (

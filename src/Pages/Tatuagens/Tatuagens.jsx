@@ -21,7 +21,8 @@ const Tatuagens = () => {
   }
 
   async function handleRequisicao() {
-    setDados(await getApi("/tatuagens"));
+    const dados = await getApi("/tatuagens")
+    setDados(dados);
   }
 
   useEffect(() => {
@@ -75,7 +76,6 @@ const Tatuagens = () => {
                 imagemUrl={item.imagemUrl}
                 nomeTatuador={item.nomeTatuador}
                 preco={item.preco}
-                onclick={hookTatto(item)}
               />
             ))
           : "Carregando"}

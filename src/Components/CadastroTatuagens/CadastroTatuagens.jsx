@@ -1,4 +1,4 @@
-import React from 'react'
+import { TextField, Button } from "@mui/material"
 import S from './CadastroTatuagens.module.css'
 
 const CadastroTatuagens = ({ data, setData, cadastrar, text, titulo }) => {

@@ -5,23 +5,29 @@
 <h1 align='center'>🖋️ Moko Tatto Studio 🖋️</h1>
 
 <h1> ⚠️ Status: </h1>
-<h4><strong>✅ Projeto Finalizado.</strong></h4>
+<h2><strong>✅ Projeto Finalizado.</strong></h2>
 
 <h1 align='center'>📃 Sobre o projeto:</h1>
 
 <h3>Desenvolvemos um site em React que consumiria dados de uma API Rest especifica criada por nós. Projeto desenvolvido em Squad.</h3>
 
-<h1> 📙 Pré-requisitos:</h1>
-<ul>
-<li><h4>VS Code;</h4></li>
-<li><h4>Git;</h4></li>
-<li><h4>Github;</h4></li>
-</ul>
-
 <h1> 💻 Link do repositório no <strong>VERCEL</strong>:</h1>
 ```
 Link Aqui: 
 ```
+
+<h1> ⚙️ Tecnologias utilizadas:</h1>
+```
+<ul>
+<h3>
+<li>React;</li>
+<li>Javascript</li>
+<li>CSS;</li>
+<li>Vercel;</li>
+</h3>
+</ul>
+```
+
 
 <h1> ⚙️ Dependências e Libs Instaladas:</h1>
 <ul>
@@ -32,6 +38,14 @@ Link Aqui:
 </ul>
 
 <h1> ⚙️ Instalação local:</h1>
+
+<h3> 📙 Pré-requisitos:</h3>
+<ul>
+<li><h4>VS Code;</h4></li>
+<li><h4>Git;</h4></li>
+<li><h4>Github;</h4></li>
+</ul>
+
 <h4>
 
 📌 Clonar repositório:

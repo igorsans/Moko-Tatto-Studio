@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="./src/assets/Home.png" width="500" title="hover text">
+</p>
+
 <h1 align='center'>🖋️ Moko Tatto Studio 🖋️</h1>
 
 <h1> ⚠️ Status: </h1>

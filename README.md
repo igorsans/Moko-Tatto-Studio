@@ -17,16 +17,15 @@ Link aqui:
 ```
 
 <h1> ⚙️ Tecnologias utilizadas:</h1>
-```
 <ul>
-<h3>
+<h1>
 <li>React;</li>
 <li>Javascript</li>
 <li>CSS;</li>
 <li>Vercel;</li>
-</h3>
+</h1>
 </ul>
-```
+
 
 
 <h1> ⚙️ Dependências e Libs Instaladas:</h1>

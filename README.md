@@ -12,18 +12,19 @@
 <h3>Desenvolvemos um site em React que consumiria dados de uma API Rest especifica criada por nós. Projeto desenvolvido em Squad.</h3>
 
 <h1> 💻 Link do repositório no <strong>VERCEL</strong>:</h1>
+
 ```
 Link aqui:
 ```
 
 <h1> ⚙️ Tecnologias utilizadas:</h1>
 <ul>
-<h1>
+<h4>
 <li>React;</li>
 <li>Javascript</li>
 <li>CSS;</li>
 <li>Vercel;</li>
-</h1>
+</h4>
 </ul>
 
 

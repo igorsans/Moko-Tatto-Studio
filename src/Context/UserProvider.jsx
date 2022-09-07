@@ -44,6 +44,7 @@ const UserProvider = ({ children }) => {
     verificaUsuario()
   };
   const [attScreen, setAttScreen] = useState(false);
+  
   async function verificaUsuario(obj){
     const clientes = await getApi("/clientes")
     clientes.filter((item)=>{

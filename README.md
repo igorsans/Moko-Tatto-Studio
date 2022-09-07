@@ -13,7 +13,7 @@
 
 <h1> 💻 Link do repositório no <strong>VERCEL</strong>:</h1>
 ```
-Link Aqui: 
+Link aqui:
 ```
 
 <h1> ⚙️ Tecnologias utilizadas:</h1>

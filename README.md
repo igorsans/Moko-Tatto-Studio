@@ -11,6 +11,13 @@
 
 <h3>Desenvolvemos um site em React que consumiria dados de uma API Rest especifica criada por nós. Projeto desenvolvido em Squad.</h3>
 
+<h1 align='center'> ⚙️ Funcionalidades:</h1>
+
+- [x] Visualização de notícias variadas;
+- [x] Criação de cadastro para usuário;
+- [x] Realização de Login;
+- [x] Consulta/ Atualização/ Deleção dos dados cadastrados;
+
 <h1> 💻 Link do repositório no <strong>VERCEL</strong>:</h1>
 
 ```

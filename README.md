@@ -24,7 +24,7 @@
 
 <h1> ➕Instalação:</h1>
 <h4>
->1: Clonar repositório:
+1: Clonar repositório:
 ``` 
 Teste
 ```

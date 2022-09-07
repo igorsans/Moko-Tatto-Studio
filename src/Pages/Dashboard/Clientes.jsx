@@ -10,7 +10,17 @@ import { getApi, delApi, putApi } from "../../Services/api";
 import S from "./Container.module.css";
 
 const Clientes = () => {
-  const { formCad, handleSetFormCad, cadastrarUser, setformCad , modal, styleModal, handleModalOpen, setAttScreen, attScreen} = useContext(UserContext);
+  const {
+    formCad,
+    handleSetFormCad,
+    cadastrarUser,
+    setformCad,
+    modal,
+    styleModal,
+    handleModalOpen,
+    setAttScreen,
+    attScreen,
+  } = useContext(UserContext);
 
   const [clientes, setClientes] = useState([]);
   const [cliente, setCliente] = useState({});
@@ -29,8 +39,8 @@ const Clientes = () => {
     handleModalOpen("delUser");
   };
   const hookAttCliente = (obj) => {
-    setformCad({...obj});
-    setCliente({ id: obj.id, nome: obj.nome, sobrenome: obj.sobrenome })
+    setformCad({ ...obj });
+    setCliente({ id: obj.id, nome: obj.nome, sobrenome: obj.sobrenome });
     handleModalOpen("editUser");
   };
   async function attCliente() {
@@ -91,6 +101,7 @@ const Clientes = () => {
         {clientes
           ? clientes.map((item) => (
               <ClienteCard
+                key={item.id}
                 id={item.id}
                 nome={item.nome}
                 email={item.email}

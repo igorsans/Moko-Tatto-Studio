@@ -15,11 +15,11 @@ const TatuagemCard = ({ id, nome, preco, disponibilidade, imagemUrl, idComprador
       <p>{imagemUrl}</p>
       <p>{idComprador}</p>
       <div>
-        <IconButton aria-label="delete" size="small">
-          <AiFillDelete onClick={modal} />
+        <IconButton onClick={modal} aria-label="delete" size="small">
+          <AiFillDelete />
         </IconButton>
-        <IconButton aria-label="delete" size="small">
-        <AiFillEdit onClick={editmodal}/>
+        <IconButton onClick={editmodal} aria-label="delete" size="small">
+        <AiFillEdit/>
         </IconButton>
       </div>
     </div>

@@ -26,7 +26,7 @@ const Routes = () => {
         <Route path="/dashboard/Agendamentos" element={<div> <HeaderDash/> <Agendamentos/> </div>}/>
         <Route path="/dashboard/News" element={<div> <HeaderDash/> <News/> </div>}/>
         <Route path="/dashboard/Tatuagens" element={<div> <HeaderDash/> <Tatto/> </div>}/>
-        <Route path="/usuario" element={<div><Header/> <Usuario/></div>} />
+        <Route path="/usuario" element={<div><Header/> <Usuario/> <Footer/></div>} />
       </Switch>
     </UserProvider>
   );

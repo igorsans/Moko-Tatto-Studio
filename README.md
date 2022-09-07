@@ -5,18 +5,20 @@
 <h1 align='center'>🖋️ Moko Tatto Studio 🖋️</h1>
 
 <h1> ⚠️ Status: </h1>
-<h2><strong>✅ Projeto Finalizado.</strong></h2>
+<h2><strong>😎 Projeto Finalizado.</strong></h2>
 
 <h1 align='center'>📃 Sobre o projeto:</h1>
 
 <h3>Desenvolvemos um site em React que consumiria dados de uma API Rest especifica criada por nós. Projeto desenvolvido em Squad.</h3>
 
-<h1 align='center'> ⚙️ Funcionalidades:</h1>
+<h1 align='center'> ✔️ Funcionalidades:</h1>
 
-- [x] Visualização de notícias variadas;
-- [x] Criação de cadastro para usuário;
-- [x] Realização de Login;
-- [x] Consulta/ Atualização/ Deleção dos dados cadastrados;
+<h4>
+☑️ Visualização de notícias variadas;
+☑️ Criação de cadastro para usuário;
+☑️ Realização de Login;
+☑️ Consulta/ Atualização/ Deleção dos dados cadastrados;
+</h4>
 
 <h1> 💻 Link do repositório no <strong>VERCEL</strong>:</h1>
 

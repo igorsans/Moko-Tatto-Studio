@@ -7,6 +7,13 @@
 
 <h3>Desenvolvemos um site em React que consumiria dados de uma API Rest especifica criada por nós. Projeto desenvolvido em Squad.</h3>
 
+<h1> ➕Pré-requisitos:</h1>
+<ul>
+<li><h4>VS Code;</h4></li>
+<li><h4>Git;</h4></li>
+<li><h4>Github;</h4></li>
+</ul>
+
 <h1> ➕Dependências e Libs Instaladas:</h1>
 <ul>
 <li><h4>NPM;</h4></li>
@@ -15,6 +22,31 @@
 <li><h4>React Icons;</h4></li>
 </ul>
 
+<h1> ➕Instalação:</h1>
+<h4>
+>1: Clonar repositório:
+``` 
+Teste
+```
+
+2: Entrar na pasta:
+```
+Teste
+```
+
+3: Instalar todas as dependências necessárias para rodar a aplicação:
+```
+Teste
+```
+
+4: Inicnar o Projeto:
+```
+Teste
+```
+
+
+
+</h4>
 
 <h1> 🚀Uso da Aplicação:</h1>
 <ul>

@@ -24,8 +24,9 @@
 
 <h1> ➕Instalação:</h1>
 <h4>
+
 1: Clonar repositório:
-``` 
+```
 Teste
 ```
 
@@ -43,9 +44,6 @@ Teste
 ```
 Teste
 ```
-
-
-
 </h4>
 
 <h1> 🚀Uso da Aplicação:</h1>

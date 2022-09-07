@@ -2,3 +2,19 @@
     width: 200px;
     height: 250px;
 }
+
+.container {
+    background-color: var(--color2);
+    width: 280px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--color1);
+    font-size: 1.2em;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.886);
+    border-radius: 10px;
+    border: none;
+}

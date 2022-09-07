@@ -3,15 +3,15 @@ import React from "react";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import S from "./AgendamentoCard.module.css";
 
-const AgendamentoCard = ({ id, nome, sobrenome, email, agendar_para, modal, editmodal }) => {
+const AgendamentoCard = ({ id, idCliente, tattoId, horario, modal, editmodal }) => {
     return (
         <div className={S.container}>
             <p>{id}</p>
             <p>
-                {nome} {sobrenome}
+                {idCliente}
             </p>
-            <p>{email}</p>
-            <p>{agendar_para}</p>
+            <p>{tattoId}</p>
+            <p>{horario}</p>
             <div>
                 <IconButton aria-label="delete" size="small">
                     <AiFillDelete onClick={modal} />

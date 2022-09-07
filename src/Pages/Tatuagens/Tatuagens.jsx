@@ -5,19 +5,8 @@ import { UserContext } from "../../Context/UserProvider";
 import { getApi, putApi } from "../../Services/api";
 import S from "./Tatuagens.module.css";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "50vh",
-  bgcolor: "#a5a5a587",
-  boxShadow: 24,
-  p: 4,
-};
-
 const Tatuagens = () => {
-  const { usuario, usuarioLogado } = useContext(UserContext);
+  const { usuario, usuarioLogado , styleModal } = useContext(UserContext);
   const [dados, setDados] = useState([]);
   const [modal, setModal] = useState(false);
   const [tatto, setTatto] = useState("");
@@ -104,7 +93,7 @@ const Tatuagens = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={styleModal}>
           {usuarioLogado ? (
             <div>
               <div>

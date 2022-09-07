@@ -9,6 +9,7 @@ import Footer from "../Components/Footer/Footer";
 import Clientes from "../Pages/Dashboard/Clientes";
 import HeaderDash from "../Components/HeaderDash/HeaderDash";
 import UserProvider, { UserContext } from "../Context/UserProvider";
+import Agendamentos from "../Pages/Dashboard/Agendamentos";
 
 const Routes = () => {
   return (
@@ -19,6 +20,7 @@ const Routes = () => {
         <Route path="/eventos/flashday" element={<div> <Header/> <Tatuagens /> <Footer/> </div>} />
         <Route path="/login" element={<div> <Header/> <Login />  <Footer/> </div>} />
         <Route path="/dashboard/Clientes" element={<div> <HeaderDash/> <Clientes/> </div>}/>
+        <Route path="/dashboard/Agendamentos" element={<div> <HeaderDash/> <Agendamentos/> </div>}/>
       </Switch>
     </UserProvider>
   );

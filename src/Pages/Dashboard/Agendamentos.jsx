@@ -1,14 +1,31 @@
 import { Button, Fab, Modal, TextField } from "@mui/material";
 import { Box } from "@mui/system";
+import { useContext, useEffect, useState } from "react";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import AgendamentoForm from "../../Components/AgendamentoForm/AgendamentoForm";
 import AgendamentoCard from "../../Components/DashBoard/AgendamentoCard/AgendamentoCard";
 import LabelAgendar from "../../Components/DashBoard/LabelCards/LabelAgendar";
-import { delAgendamento, } from "../../Services/api";
+import { UserContext } from "../../Context/UserProvider";
+import { getApi } from "../../Services/api";
 import S from "./Container.module.css";
 
-const Agendamento = () =>{
-
+const Agendamentos = () =>{
+  const { modal, setModal, styleModal, attScreen, setAttScreen} = useContext(UserContext);
+  const [agendamentos, setAgendamentos] = useState([])
+  const [agendamento, setAgendamento] = useState("")
+  async function requisicao() {
+    const resposta = await getApi("/agendamentos");
+    setAgendamentos(resposta);
+  }
+  useEffect(() => {
+    if (attScreen) {
+      requisicao();
+      setAttScreen(false);
+    }
+  }, [attScreen]);
+  useEffect(() => {
+    requisicao();
+  }, []);
 return (
     <div className={S.container}>
       <div className={S.input}>
@@ -23,22 +40,21 @@ return (
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <Box sx={style}>
-            <AgendamentoForm titulo={"Preencha os dados abaixo"} text={"Agendar"} agendar={postCliente} data={formAgd} setData={handleSetFormAgd} />
+          <Box sx={styleModal}>
+            <AgendamentoForm titulo={"Preencha os dados abaixo"} text={"Agendar"} agendar={"postCliente"} data={"formAgd"} setData={"handleSetFormAgd"} />
           </Box>
         </Modal>
       </div>
       <LabelAgendar />
-      {Agendamento
-        ? Agendamento.map((item) => (
+      {agendamentos
+        ? agendamentos.map((item) => (
             <AgendamentoCard
               id={item.id}
-              nome={item.nome}
-              sobrenome={item.sobrenome}
-              email={item.email}
-              data={item.agendar_para}
+              idCliente={item.idCliente}
+              tattoId={item.tattoId}
+              horario={item.horario}
               modal={()=> hookDelAgenda(item) }
-              del={delAgendamento}
+              del={"delAgendamento"}
               editmodal={()=> hookAttAgenda(item.id)}
             />
           ))
@@ -49,10 +65,10 @@ return (
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <Box sx={style}>
-            <p>Tem certeza que deseja excluir o agendamento de: {Agendamento.nome} {Agendamento.sobrenome}</p>
+          <Box sx={styleModal}>
+            <p>Tem certeza que deseja excluir o agendamento de: {agendamento.nome} {agendamento.sobrenome}</p>
             <p>do banco de dados?</p>
-            <Button onClick={()=> delCliente(Agendamento.id)} color="error" variant="contained">Deletar</Button>
+            <Button onClick={()=> delApi(agendamento.id)} color="error" variant="contained">Deletar</Button>
             <Button onClick={()=> handleModalOpen('delUser')} color="primary" variant="contained">Voltar</Button>
           </Box>
         </Modal>
@@ -62,8 +78,8 @@ return (
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <Box sx={style}>
-            <AgendamentoForm titulo={`Atualize ${cliente.nome} ${cliente.sobrenome}`} text={"Atualizar"} cadastrar={attAgenda} data={formAgd} setData={handleSetFormAgd} />
+          <Box sx={styleModal}>
+            <AgendamentoForm titulo={`Atualize ${agendamento.nome} ${agendamento.sobrenome}`} text={"Atualizar"} cadastrar={"attAgenda"} data={"formAgd"} setData={"handleSetFormAgd"} />
             <Button onClick={()=> handleModalOpen('editUser')} color="primary" variant="contained">Voltar</Button>
           </Box>
         </Modal>
@@ -71,4 +87,4 @@ return (
   );
 };
 
-export default Agendamento;
+export default Agendamentos;

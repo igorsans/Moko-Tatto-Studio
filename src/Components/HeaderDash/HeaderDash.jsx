@@ -8,10 +8,10 @@ const HeaderDash = () => {
             <Link to="/"> <ImExit/> </Link>
         </div>
         <nav className={S.nav}>
-            <Link to="/">Agendamentos</Link>
-            <Link to="/">Clientes</Link>
-            <Link to="/">News</Link>
-            <Link to="/">Tatuagens</Link>
+            <Link to="/dashboard/Agendamentos">Agendamentos</Link>
+            <Link to="/dashboard/Clientes">Clientes</Link>
+            <Link to="/dashboard/News">News</Link>
+            <Link to="/dashboard/Tatuagens">Tatuagens</Link>
         </nav>
     </header>
   )

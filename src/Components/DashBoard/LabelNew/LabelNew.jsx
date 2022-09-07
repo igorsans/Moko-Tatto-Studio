@@ -5,7 +5,7 @@ const LabelNew = () => {
     return (
         <div className={S.container}>
             <p>ID</p>
-            <p>URL</p>
+            <p>URL IMG</p>
             <p>TITULO</p>
             <p>DESCRICAO</p>
             <p><AiFillTool/></p>

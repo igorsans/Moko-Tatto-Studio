@@ -9,25 +9,18 @@ import { UserContext } from "../../Context/UserProvider";
 import { getApi, delApi, putApi } from "../../Services/api";
 import S from "./Container.module.css";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "50vh",
-  bgcolor: "#a5a5a587",
-  boxShadow: 24,
-  p: 4,
-};
-
 const Clientes = () => {
-  const { formCad, handleSetFormCad, cadastrarUser, setformCad } = useContext(UserContext);
-  const [attScreen, setAttScreen] = useState(false);
-  const [modal, setModal] = useState({
-    newUser: false,
-    editUser: false,
-    delUser: false,
-  });
+  const {
+    formCad,
+    handleSetFormCad,
+    cadastrarUser,
+    setformCad,
+    modal,
+    styleModal,
+    handleModalOpen,
+    setAttScreen,
+    attScreen,
+  } = useContext(UserContext);
 
   const [clientes, setClientes] = useState([]);
   const [cliente, setCliente] = useState({});
@@ -36,11 +29,6 @@ const Clientes = () => {
     setClientes(resposta);
   }
 
-  const handleModalOpen = (chave) => {
-    modal[chave]
-      ? setModal({ ...modal, [chave]: false })
-      : setModal({ ...modal, [chave]: true });
-  };
   async function postCliente() {
     await cadastrarUser();
     setAttScreen(true);
@@ -51,12 +39,20 @@ const Clientes = () => {
     handleModalOpen("delUser");
   };
   const hookAttCliente = (obj) => {
-    setformCad({...obj});
-    setCliente({ id: obj.id, nome: obj.nome, sobrenome: obj.sobrenome })
+    setformCad({ ...obj });
+    setCliente({ id: obj.id, nome: obj.nome, sobrenome: obj.sobrenome });
     handleModalOpen("editUser");
   };
   async function attCliente() {
     await putApi("/clientes", cliente.id, formCad);
+    setformCad({
+      nome: "",
+      sobrenome: "",
+      telefone: "",
+      dataNascimento: "",
+      email: "",
+      senha: "",
+    });
     handleModalOpen("editUser");
     setAttScreen(true);
   }
@@ -89,7 +85,7 @@ const Clientes = () => {
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <Box sx={style}>
+          <Box sx={styleModal}>
             <CadastroForm
               titulo={"Preencha os dados abaixo"}
               text={"Cadastrar"}
@@ -105,6 +101,7 @@ const Clientes = () => {
         {clientes
           ? clientes.map((item) => (
               <ClienteCard
+                key={item.id}
                 id={item.id}
                 nome={item.nome}
                 email={item.email}
@@ -123,7 +120,7 @@ const Clientes = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={styleModal}>
           <p>
             Tem certeza que deseja excluir o usuario: {cliente.nome}{" "}
             {cliente.sobrenome}
@@ -151,7 +148,7 @@ const Clientes = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={styleModal}>
           <CadastroForm
             titulo={`Atualize ${cliente.nome} ${cliente.sobrenome}`}
             text={"Atualizar"}

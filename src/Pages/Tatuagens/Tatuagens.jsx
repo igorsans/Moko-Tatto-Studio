@@ -5,22 +5,12 @@ import { UserContext } from "../../Context/UserProvider";
 import { getApi, putApi } from "../../Services/api";
 import S from "./Tatuagens.module.css";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "50vh",
-  bgcolor: "#a5a5a587",
-  boxShadow: 24,
-  p: 4,
-};
-
 const Tatuagens = () => {
-  const { usuario, usuarioLogado } = useContext(UserContext);
+  const { usuario, usuarioLogado , styleModal } = useContext(UserContext);
   const [dados, setDados] = useState([]);
   const [modal, setModal] = useState(false);
   const [tatto, setTatto] = useState("");
+  const [attPage, setAttPage] = useState(true)
 
   const handleModal = () => {
     modal ? setModal(false) : setModal(true);
@@ -29,12 +19,13 @@ const Tatuagens = () => {
   const hookTatto = (obj) => {
     handleModal();
     setTatto({ ...obj });
-    console.log(usuario)
+    console.log(tatto)
   };
   async function handleAgendamento(){
     const obj = { disponivel: 0, idComprador: usuario.id}
-
     await putApi(`/tatuagens/cliente`, tatto.id, obj)
+    setAttPage(true)
+    handleModal()
   }
   async function handleRequisicao() {
     const dados = await getApi("/tatuagens");
@@ -43,7 +34,8 @@ const Tatuagens = () => {
 
   useEffect(() => {
     handleRequisicao();
-  }, []);
+    setAttPage(false)
+  }, [attPage]);
 
   return (
     <section>
@@ -104,7 +96,7 @@ const Tatuagens = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={styleModal}>
           {usuarioLogado ? (
             <div>
               <div>

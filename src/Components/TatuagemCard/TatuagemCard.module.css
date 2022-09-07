@@ -1,5 +1,10 @@
 .container{
     display: flex;
     justify-content: space-between;
-    padding: 5px 20px;
+    padding: 5px 10px;
+}
+.container > p{
+    overflow: auto;
+    width: 110px;
+    padding-top: 10px;
 }

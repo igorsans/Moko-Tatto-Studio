@@ -14,6 +14,7 @@
 <h1 align='center'> ✔️ Funcionalidades:</h1>
 
 <h4>
+
 ☑️ Visualização de notícias variadas sobre o site e assunto tatuagem;
 
 ☑️ Criação de cadastro para usuário;

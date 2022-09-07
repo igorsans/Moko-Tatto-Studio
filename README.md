@@ -18,6 +18,11 @@
 <li><h4>Github;</h4></li>
 </ul>
 
+<h1> 💻 Link do repositório no <strong>VERCEL</strong>:</h1>
+```
+Link Aqui: 
+```
+
 <h1> ⚙️ Dependências e Libs Instaladas:</h1>
 <ul>
 <li><h4>NPM;</h4></li>
@@ -29,22 +34,22 @@
 <h1> ⚙️ Instalação local:</h1>
 <h4>
 
-1:📌 Clonar repositório:
+📌 Clonar repositório:
 ```
 Teste
 ```
 
-2:📌 Entrar na pasta:
+📌 Entrar na pasta:
 ```
 Teste
 ```
 
-3:📌 Instalar todas as dependências necessárias para rodar a aplicação:
+📌 Instalar todas as dependências necessárias para rodar a aplicação:
 ```
 Teste
 ```
 
-4:📌 Inicnar o Projeto:
+📌 Iniciar o Projeto:
 ```
 Teste
 ```

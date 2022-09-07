@@ -10,6 +10,7 @@ const Tatuagens = () => {
   const [dados, setDados] = useState([]);
   const [modal, setModal] = useState(false);
   const [tatto, setTatto] = useState("");
+  const [attPage, setAttPage] = useState(true)
 
   const handleModal = () => {
     modal ? setModal(false) : setModal(true);
@@ -18,12 +19,13 @@ const Tatuagens = () => {
   const hookTatto = (obj) => {
     handleModal();
     setTatto({ ...obj });
-    console.log(usuario)
+    console.log(tatto)
   };
   async function handleAgendamento(){
     const obj = { disponivel: 0, idComprador: usuario.id}
-
     await putApi(`/tatuagens/cliente`, tatto.id, obj)
+    setAttPage(true)
+    handleModal()
   }
   async function handleRequisicao() {
     const dados = await getApi("/tatuagens");
@@ -32,7 +34,8 @@ const Tatuagens = () => {
 
   useEffect(() => {
     handleRequisicao();
-  }, []);
+    setAttPage(false)
+  }, [attPage]);
 
   return (
     <section>

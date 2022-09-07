@@ -6,16 +6,59 @@ import AgendamentoForm from "../../Components/AgendamentoForm/AgendamentoForm";
 import AgendamentoCard from "../../Components/DashBoard/AgendamentoCard/AgendamentoCard";
 import LabelAgendar from "../../Components/DashBoard/LabelCards/LabelAgendar";
 import { UserContext } from "../../Context/UserProvider";
-import { getApi } from "../../Services/api";
+import { delApi, getApi, postApi, putApi } from "../../Services/api";
 import S from "./Container.module.css";
 
 const Agendamentos = () =>{
-  const { modal, setModal, styleModal, attScreen, setAttScreen} = useContext(UserContext);
+  const { modal, styleModal, attScreen, setAttScreen, handleModalOpen} = useContext(UserContext);
   const [agendamentos, setAgendamentos] = useState([])
   const [agendamento, setAgendamento] = useState("")
+  const [formAgd, setFormAgd]= useState({
+    idCliente: "",
+    tattoId: "",
+    horario: ""
+  })
+  const handleSetFormAgd = (target, key) =>{
+    setFormAgd({...formAgd, [key]: target.value})
+    console.log(formAgd)
+  }
+  async function postAgenda(){
+    await postApi("/agendamentos", formAgd)
+    handleModalOpen("newAgenda")
+    setAttScreen(true);
+    setFormAgd({
+      idCliente: "",
+      tattoId: "",
+      horario: ""
+    })
+  }
   async function requisicao() {
     const resposta = await getApi("/agendamentos");
     setAgendamentos(resposta);
+  }
+  const hookDelAgenda = (obj) => {
+    handleModalOpen("delAgenda")
+    setAgendamento(obj)
+  }
+  const hookAttAgenda= (obj) =>{
+    handleModalOpen('editAgenda')
+    setAgendamento(obj)
+    setFormAgd(obj)
+  }
+  async function attAgenda(){
+    await putApi("/agendamentos", agendamento.id, formAgd)
+    setAttScreen(true);
+    handleModalOpen('editAgenda')
+    setFormAgd({
+      idCliente: "",
+      tattoId: "",
+      horario: ""
+    })
+  }
+  async function delAgenda(){
+    await delApi("/agendamentos", agendamento.id);
+    handleModalOpen("delAgenda");
+    setAttScreen(true);
   }
   useEffect(() => {
     if (attScreen) {
@@ -41,7 +84,7 @@ return (
           aria-describedby="modal-modal-description"
         >
           <Box sx={styleModal}>
-            <AgendamentoForm titulo={"Preencha os dados abaixo"} text={"Agendar"} agendar={"postCliente"} data={"formAgd"} setData={"handleSetFormAgd"} />
+            <AgendamentoForm titulo={"Preencha os dados abaixo"} text={"Agendar"} agendar={postAgenda} data={formAgd} setData={handleSetFormAgd} />
           </Box>
         </Modal>
       </div>
@@ -55,32 +98,32 @@ return (
               horario={item.horario}
               modal={()=> hookDelAgenda(item) }
               del={"delAgendamento"}
-              editmodal={()=> hookAttAgenda(item.id)}
+              editmodal={()=> hookAttAgenda(item)}
             />
           ))
         : "carregando..."}
         <Modal
-          open={modal.delUser}
+          open={modal.delAgenda}
           onClose={()=> handleModalOpen('delUser')}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
           <Box sx={styleModal}>
-            <p>Tem certeza que deseja excluir o agendamento de: {agendamento.nome} {agendamento.sobrenome}</p>
+            <p>Tem certeza que deseja excluir o agendamento de: id:{agendamento.id} marcado para {agendamento.horario}h</p>
             <p>do banco de dados?</p>
-            <Button onClick={()=> delApi(agendamento.id)} color="error" variant="contained">Deletar</Button>
-            <Button onClick={()=> handleModalOpen('delUser')} color="primary" variant="contained">Voltar</Button>
+            <Button onClick={()=> delAgenda()} color="error" variant="contained">Deletar</Button>
+            <Button onClick={()=> handleModalOpen('delAgenda')} color="primary" variant="contained">Voltar</Button>
           </Box>
         </Modal>
         <Modal
-          open={modal.editUser}
-          onClose={()=> handleModalOpen('editUser')}
+          open={modal.editAgenda}
+          onClose={()=> handleModalOpen('editAgenda')}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
           <Box sx={styleModal}>
-            <AgendamentoForm titulo={`Atualize ${agendamento.nome} ${agendamento.sobrenome}`} text={"Atualizar"} cadastrar={"attAgenda"} data={"formAgd"} setData={"handleSetFormAgd"} />
-            <Button onClick={()=> handleModalOpen('editUser')} color="primary" variant="contained">Voltar</Button>
+            <AgendamentoForm titulo={`Atualize agendamento de id:${agendamento.id} marcado para:${agendamento.horario}h`} text={"Atualizar"} agendar={attAgenda} data={formAgd} setData={handleSetFormAgd} />
+            <Button onClick={()=> handleModalOpen('editAgenda')} color="primary" variant="contained">Voltar</Button>
           </Box>
         </Modal>
     </div>

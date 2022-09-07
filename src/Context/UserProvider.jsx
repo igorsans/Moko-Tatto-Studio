@@ -12,8 +12,9 @@ const UserProvider = ({ children }) => {
     transform: "translate(-50%, -50%)",
     width: "50vh",
     bgcolor: "#9f9f9f",
-    boxShadow: 24,
-    p: 4,
+    color: "black",
+    boxShadow: 50,
+    p: 10,
   };
   const navigate = useNavigate()
   const [usuarioLogado, setUsuarioLogado] = useState(false)

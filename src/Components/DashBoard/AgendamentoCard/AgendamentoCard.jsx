@@ -11,7 +11,7 @@ const AgendamentoCard = ({ id, idCliente, tattoId, horario, modal, editmodal }) 
                 {idCliente}
             </p>
             <p>{tattoId}</p>
-            <p>{horario}</p>
+            <p>{horario}h</p>
             <div>
                 <IconButton aria-label="delete" size="small">
                     <AiFillDelete onClick={modal} />

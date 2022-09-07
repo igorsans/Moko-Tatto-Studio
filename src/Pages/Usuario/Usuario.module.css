@@ -1,0 +1,31 @@
+.container{
+    font-family: var(--font2);
+    display: grid;
+    padding: 15px;
+    grid-template-rows: 100px auto;
+    padding: 200px;
+    justify-items: center;
+    align-content: space-between;
+}
+
+.usuario{
+    color: white;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 320px 320px 320px;
+    grid-template-rows: 400px 400px;
+}
+
+.usuarioDiv{
+    grid-template-columns: 70%;
+}
+
+.compras{
+    color: white;
+    font-size: 25px;
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+}

@@ -45,9 +45,7 @@ Link aqui:
 <h1> ⚙️ Dependências e Libs Instaladas:</h1>
 <ul>
 <li><h4>NPM;</h4></li>
-<li><h4>Vite;</h4></li>
-<li><h4>React Router Dom;</h4></li>
-<li><h4>React Icons;</h4></li>
+<li><h4>Vite JS;</h4></li>
 </ul>
 
 <h1> ⚙️ Instalação local:</h1>
@@ -63,17 +61,21 @@ Link aqui:
 
 📌 Clonar repositório:
 ```
-Teste
+<strong>Link:</strong> https://github.com/igorsans/Moko-Tatto-Studio.git
 ```
 
 📌 Entrar na pasta:
 ```
-Teste
+cd Moko-Tatto-Studio;
 ```
 
 📌 Instalar todas as dependências necessárias para rodar a aplicação:
 ```
-Teste
+npm install;
+npm install react-router-dom;
+npm install axios;
+npm install @mui/material @emotion/react @emotion/styled;
+npm install react-icons --save
 ```
 
 📌 Iniciar o Projeto:

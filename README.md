@@ -27,7 +27,7 @@
 <h1> 💻 Link do repositório no <strong>VERCEL</strong>:</h1>
 
 ```
-https://moko-tatto-studio.vercel.app
+https://moko-tatto-studio.vercel.app;
 ```
 
 <h1> ⚙️ Tecnologias utilizadas:</h1>
@@ -75,7 +75,7 @@ npm install;
 npm install react-router-dom;
 npm install axios;
 npm install @mui/material @emotion/react @emotion/styled;
-npm install react-icons --save
+npm install react-icons --save;
 ```
 
 📌 Iniciar o Projeto:
@@ -94,10 +94,19 @@ npm run dev;
 
 <h1> 🧱 Database:</h1>
 <h4> API Rest do projeto Moko Tatto Studio, criado em Squad.
-* [Moko Tattoo Studio](https://github.com/Josirocha/moko_tattoo_studio)</h4>
+
+* [Link](https://github.com/Josirocha/moko_tattoo_studio)</h4>
 
 <h1> 🐛 Solução de problemas:</h1>
 <h4> Favor entrar em contato com a equipe 💬</h4>
+
+<h3>
+
+* [Edson Vieira](https://www.linkedin.com/in/edson-vieira7728/)
+* [Guilherme Cordeiro](https://www.linkedin.com/in/guilhermecordeirodamata/)
+* [Igor Santos](https://www.linkedin.com/in/devsantos/)
+* [Pedro Garrido](https://www.linkedin.com/in/pedro-garrido-1a8482205)
+</h3>
 
 <h1 align='center'> 👷 Contribuintes:</h1>
 

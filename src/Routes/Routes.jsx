@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Home from "../Pages/Home/Home";
 import Sobre from "../Pages/Sobre/Sobre";
 import Tatuagens from "../Pages/Tatuagens/Tatuagens";
@@ -13,11 +13,24 @@ import Agendamentos from "../Pages/Dashboard/Agendamentos";
 import News from "../Pages/Dashboard/News";
 import Tatto from "../Pages/Dashboard/Tatto"
 import Usuario from "../Pages/Usuario/Usuario";
+import S from "./Routes.module.css"
 
 const Routes = () => {
+
+  const[loading, setLoading] = useState(false)
+  
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <UserProvider>
-      <Switch>
+      {loading ? (<div className={S.loader_container}>
+        <div className={S.spinner}></div>
+      </div>) : (<Switch>
         <Route path="/" element={<div> <Header/> <Home /> <Footer/> </div>}/>
         <Route path="/sobre" element={<div> <Header/> <Sobre /> <Footer/> </div>} />
         <Route path="/eventos/flashday" element={<div> <Header/> <Tatuagens /> <Footer/> </div>} />
@@ -27,7 +40,7 @@ const Routes = () => {
         <Route path="/dashboard/News" element={<div> <HeaderDash/> <News/> </div>}/>
         <Route path="/dashboard/Tatuagens" element={<div> <HeaderDash/> <Tatto/> </div>}/>
         <Route path="/usuario" element={<div><Header/> <Usuario/> <Footer/></div>} />
-      </Switch>
+      </Switch>)}
     </UserProvider>
   );
 };

@@ -100,13 +100,12 @@ npm run dev;
 <h1> 🐛 Solução de problemas:</h1>
 <h4> Favor entrar em contato com a equipe 💬</h4>
 
-<h3>
+<h3> 
 
-* [Edson Vieira](https://www.linkedin.com/in/edson-vieira7728/)
-* [Guilherme Cordeiro](https://www.linkedin.com/in/guilhermecordeirodamata/)
-* [Igor Santos](https://www.linkedin.com/in/devsantos/)
-* [Pedro Garrido](https://www.linkedin.com/in/pedro-garrido-1a8482205)
-</h3>
+* [Edson Vieira 💬](https://www.linkedin.com/in/edson-vieira7728/)
+* [Guilherme Cordeiro 💬](https://www.linkedin.com/in/guilhermecordeirodamata/)
+* [Igor Santos 💬](https://www.linkedin.com/in/devsantos/)
+* [Pedro Garrido 💬](https://www.linkedin.com/in/pedro-garrido-1a8482205)</h3>
 
 <h1 align='center'> 👷 Contribuintes:</h1>
 

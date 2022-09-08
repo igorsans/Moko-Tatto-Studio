@@ -27,7 +27,7 @@
 <h1> 💻 Link do repositório no <strong>VERCEL</strong>:</h1>
 
 ```
-Link aqui:
+https://moko-tatto-studio.vercel.app
 ```
 
 <h1> ⚙️ Tecnologias utilizadas:</h1>
@@ -61,7 +61,7 @@ Link aqui:
 
 📌 Clonar repositório:
 ```
-<strong>Link:</strong> https://github.com/igorsans/Moko-Tatto-Studio.git
+Link: https://github.com/igorsans/Moko-Tatto-Studio.git
 ```
 
 📌 Entrar na pasta:
@@ -80,7 +80,7 @@ npm install react-icons --save
 
 📌 Iniciar o Projeto:
 ```
-Teste
+npm run dev;
 ```
 </h4>
 
@@ -93,7 +93,8 @@ Teste
 
 
 <h1> 🧱 Database:</h1>
-<h4> API Rest do projeto Moko Tatto Studio, criado em Squad.</h4>
+<h4> API Rest do projeto Moko Tatto Studio, criado em Squad.
+* [Moko Tattoo Studio](https://github.com/Josirocha/moko_tattoo_studio)</h4>
 
 <h1> 🐛 Solução de problemas:</h1>
 <h4> Favor entrar em contato com a equipe 💬</h4>

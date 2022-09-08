@@ -5,6 +5,7 @@ import { getApi } from "../../Services/api";
 import { useEffect } from "react";
 import CardTattoUsuario from "../../Components/CardTattoUsuario/CardTattoUsuario";
 import CadastroForm from "../../Components/CadastroForm/CadastroForm";
+import S from './Usuario.module.css'
 
 const Usuario = () => {
   const { usuario, setAttScreen, attScreen } = useContext(UserContext);
@@ -23,36 +24,22 @@ const Usuario = () => {
     console.log(tattos);
   }, []);
   return (
-    <div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <h2>
+    <div className={S.container}>
+      <h2 className={S.usuario}>
         Olá {usuario.nome} {usuario.sobrenome} seja bem vindo ao painel do usuario
       </h2>
-      <div>
-        <div>
+          <div className={S.compras}>
           <p>
             <AiOutlineShopping /> Suas compras:
           </p>
-          <div>
+          </div>
+          <div className={S.card}>
           {tattos?
             tattos.filter(checkTatto).map((item) => 
                 <CardTattoUsuario obj={item}/>
             ) : ""
         }
           </div>
-        </div>
-      </div>
     </div>
   );
 };

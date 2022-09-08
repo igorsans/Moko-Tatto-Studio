@@ -11,7 +11,7 @@ const Sobre = () => {
       nome: "Guilherme Cordeiro",
       linkedin: "https://www.linkedin.com/in/guilhermecordeirodamata/",
       github: "https://github.com/Dev-DaMata",
-      texto: "Ola, me chamo Guilherme e sou apaixonado por tattuagens. e a minha meta aqui na Moko tatto é transmitir essa paizão para os meus clientes",
+      texto: "Ola, me chamo Guilherme e sou apaixonado por tattuagens. e a minha meta aqui na Moko tatto é transmitir essa paixão para os meus clientes",
       dev: true
     },
     {
@@ -27,7 +27,7 @@ const Sobre = () => {
       nome: "Edson Vieira",
       linkedin: "https://www.linkedin.com/in/edson-vieira7728/",
       github: "https://github.com/Edson-7728",
-        texto: "oioi",
+        texto: "Aqui o cliente não escolhe a tattoo... a tattoo é que escolhe o cliente. Eu apenas promovo o encontro.",
       dev: true
     },
     {

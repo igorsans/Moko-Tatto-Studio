@@ -34,15 +34,16 @@ const News = () => {
   }
   const hookDelNew = (obj) => {
     setNoticia(obj);
-    setNoticia(obj);
     handleModalOpen("delNoticia");
   };
   const hookAttNew = (obj) => {
     setformNews(obj);
+    setNoticia(obj);
     handleModalOpen("attNoticia");
   };
   async function attNew() {
     await putApi("/noticias", noticia.id, formNews);
+    console.log(noticia)
     setAttScreen(true);
     handleModalOpen("attNoticia");
     setformNews({

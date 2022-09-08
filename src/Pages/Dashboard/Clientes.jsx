@@ -53,11 +53,11 @@ const Clientes = () => {
       email: "",
       senha: "",
     });
-    handleModalOpen("editUser");
     setAttScreen(true);
+    handleModalOpen("editUser");
   }
-  async function delCliente(id) {
-    await delApi("/clientes", id);
+  async function delCliente() {
+    await delApi("/clientes", cliente.id);
     handleModalOpen("delUser");
     setAttScreen(true);
   }
@@ -127,7 +127,7 @@ const Clientes = () => {
           </p>
           <p>do banco de dados?</p>
           <Button
-            onClick={() => delCliente(cliente.id)}
+            onClick={() => delCliente()}
             color="error"
             variant="contained"
           >

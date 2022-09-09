@@ -1,11 +1,10 @@
-import React, { useContext, useState } from "react";
-import { UserContext } from "../../Context/UserProvider";
-import { AiOutlineShopping, AiOutlineEdit } from "react-icons/ai";
-import { getApi } from "../../Services/api";
-import { useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { AiFillSetting, AiOutlineShopping } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import CardTattoUsuario from "../../Components/CardTattoUsuario/CardTattoUsuario";
-import CadastroForm from "../../Components/CadastroForm/CadastroForm";
-import S from './Usuario.module.css'
+import { UserContext } from "../../Context/UserProvider";
+import { getApi } from "../../Services/api";
+import S from './Usuario.module.css';
 
 const Usuario = () => {
   const { usuario, setAttScreen, attScreen } = useContext(UserContext);
@@ -25,6 +24,7 @@ const Usuario = () => {
   }, []);
   return (
     <div className={S.container}>
+      <Link className={S.usuario} to="/dashboard/Clientes">Dashboards <AiFillSetting/></Link>
       <h2 className={S.usuario}>
         Olá {usuario.nome} {usuario.sobrenome} seja bem vindo ao painel do usuario
       </h2>

@@ -28,7 +28,7 @@
 
 ```
 
-https://moko-tatto-studio.vercel.app;
+https://moko-tatto-studio.vercel.app
 ```
 
 <h1> 💻 Endpoints:</h1>

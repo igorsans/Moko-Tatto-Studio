@@ -27,7 +27,7 @@
 <h1> 💻 Link do repositório no <strong>VERCEL</strong>:</h1>
 
 ```
-Link aqui:
+https://moko-tatto-studio.vercel.app;
 ```
 
 <h1> ⚙️ Tecnologias utilizadas:</h1>
@@ -45,9 +45,7 @@ Link aqui:
 <h1> ⚙️ Dependências e Libs Instaladas:</h1>
 <ul>
 <li><h4>NPM;</h4></li>
-<li><h4>Vite;</h4></li>
-<li><h4>React Router Dom;</h4></li>
-<li><h4>React Icons;</h4></li>
+<li><h4>Vite JS;</h4></li>
 </ul>
 
 <h1> ⚙️ Instalação local:</h1>
@@ -63,22 +61,26 @@ Link aqui:
 
 📌 Clonar repositório:
 ```
-Teste
+Link: https://github.com/igorsans/Moko-Tatto-Studio.git
 ```
 
 📌 Entrar na pasta:
 ```
-Teste
+cd Moko-Tatto-Studio;
 ```
 
 📌 Instalar todas as dependências necessárias para rodar a aplicação:
 ```
-Teste
+npm install;
+npm install react-router-dom;
+npm install axios;
+npm install @mui/material @emotion/react @emotion/styled;
+npm install react-icons --save;
 ```
 
 📌 Iniciar o Projeto:
 ```
-Teste
+npm run dev;
 ```
 </h4>
 
@@ -91,10 +93,19 @@ Teste
 
 
 <h1> 🧱 Database:</h1>
-<h4> API Rest do projeto Moko Tatto Studio, criado em Squad.</h4>
+<h4> API Rest do projeto Moko Tatto Studio, criado em Squad.
+
+* [Link](https://github.com/Josirocha/moko_tattoo_studio)</h4>
 
 <h1> 🐛 Solução de problemas:</h1>
-<h4> Favor entrar em contato com a equipe 💬</h4>
+<h> Favor entrar em contato com a equipe 💬</h4>
+
+<h5> 
+
+* [Edson Vieira 💬](https://www.linkedin.com/in/edson-vieira7728/)
+* [Guilherme Cordeiro 💬](https://www.linkedin.com/in/guilhermecordeirodamata/)
+* [Igor Santos 💬](https://www.linkedin.com/in/devsantos/)
+* [Pedro Garrido 💬](https://www.linkedin.com/in/pedro-garrido-1a8482205)</h5>
 
 <h1 align='center'> 👷 Contribuintes:</h1>
 

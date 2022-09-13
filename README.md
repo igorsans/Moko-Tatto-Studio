@@ -27,8 +27,40 @@
 <h1> 💻 Link do repositório no <strong>VERCEL</strong>:</h1>
 
 ```
-https://moko-tatto-studio.vercel.app;
+
+https://moko-tatto-studio.vercel.app
 ```
+
+<h1> 💻 Endpoints:</h1>
+
+<h4>
+
+Sobre:
+https://moko-tatto-studio.vercel.app/sobre
+
+Eventos:
+https://moko-tatto-studio.vercel.app/eventos/flashday
+
+Login:
+https://moko-tatto-studio.vercel.app/Login
+
+Clientes:
+https://moko-tatto-studio.vercel.app/dashboard/Clientes
+
+Agendamentos:
+https://moko-tatto-studio.vercel.app/dashboard/Agendamentos
+
+News:
+https://moko-tatto-studio.vercel.app/dashboard/News
+
+Tatuagens:
+https://moko-tatto-studio.vercel.app/dashboard/Tatuagens
+
+Usuário:
+https://moko-tatto-studio.vercel.app/usuario 
+</h4>
+
+
 
 <h1> ⚙️ Tecnologias utilizadas:</h1>
 <ul>
@@ -76,6 +108,7 @@ npm install react-router-dom;
 npm install axios;
 npm install @mui/material @emotion/react @emotion/styled;
 npm install react-icons --save;
+npm install react-material-ui-carousel
 ```
 
 📌 Iniciar o Projeto:
